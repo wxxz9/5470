@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting to Verification</title>
-  <meta http-equiv="refresh" content="3; url=aspirin-verification.png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,6 +36,7 @@
       counter.textContent = count;
       if (count === 0) {
         clearInterval(interval);
+        window.location.href = "aspirin-verification.png";
       }
     }, 1000);
   </script>
