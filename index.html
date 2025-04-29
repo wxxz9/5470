@@ -1,11 +1,44 @@
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=aspirin-verification.png" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-    <p>Redirecting to Verification</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to Verification</title>
+  <meta http-equiv="refresh" content="3; url=aspirin-verification.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .countdown {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #0078D7;
+    }
+    .message {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verifying</h1>
+  <div class="message">You will be redirected in <span class="countdown" id="count">3</span> seconds...</div>
+
+  <script>
+    let count = 3;
+    const counter = document.getElementById('count');
+    const interval = setInterval(() => {
+      count--;
+      counter.textContent = count;
+      if (count === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+  </script>
+</body>
 </html>
